@@ -19,7 +19,6 @@ dependencies:
 
 ```crystal
 require "smtp.cr"
-```
 
 client = SMTP::Client.new("localhost")
 
@@ -41,7 +40,7 @@ message.body = %{
 
 client.send message
 
-
+```
 
 ## Development
 
