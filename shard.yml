@@ -2,6 +2,6 @@ name: smtp
 version: 0.1.0
 
 authors:
-  - qio <info.qio.io@gmail.com>
+  - raydf 
 
 license: MIT

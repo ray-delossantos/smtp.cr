@@ -1,6 +1,6 @@
 # smtp.cr
 
-TODO: Write a description here
+SMTP client in Crystal
 
 ## Installation
 
@@ -10,7 +10,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   smtp.cr:
-    github: [your-github-name]/smtp.cr
+    github: raydf/smtp.cr
 ```
 
 
@@ -21,8 +21,27 @@ dependencies:
 require "smtp.cr"
 ```
 
+client = SMTP::Client.new("localhost")
 
-TODO: Write usage instructions here
+message = SMTP::Message.new()
+message.from = SMTP::Address.new(email="info@test.com", name="Test")
+message.to << SMTP::Address.new(email="test@mail.com", name="Name")
+message.subject = "Testing message"
+message.body = %{
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Demystifying Email Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>Test <h1><strong>HTML</strong></h1></body>
+  </html>
+}
+
+client.send message
+
+
 
 ## Development
 
@@ -30,7 +49,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it ( https://github.com/[your-github-name]/smtp.cr/fork )
+1. Fork it ( https://github.com/raydf/smtp.cr/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
@@ -38,4 +57,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/[your-github-name]) qio - creator, maintainer
+- [[raydf]](https://github.com/raydf) Rayner De Los Santos - creator, maintainer
