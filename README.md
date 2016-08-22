@@ -18,7 +18,7 @@ dependencies:
 
 
 ```crystal
-require "smtp.cr"
+require "smtp"
 
 client = SMTP::Client.new("localhost")
 
