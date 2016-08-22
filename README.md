@@ -9,7 +9,7 @@ Add this to your application's `shard.yml`:
 
 ```yaml
 dependencies:
-  smtp.cr:
+  smtp:
     github: raydf/smtp.cr
 ```
 
