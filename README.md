@@ -46,6 +46,10 @@ client.send message
 
 TODO: Write development instructions here
 
+## Alternative shard/lib
+
+https://github.com/arcage/crystal-email
+
 ## Contributing
 
 1. Fork it ( https://github.com/raydf/smtp.cr/fork )
