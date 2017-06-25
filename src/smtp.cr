@@ -147,13 +147,13 @@ module SMTP
         end
       end
 
-      if cc = @to
+      if cc = @cc
         cc.each do |rcpt|
           io << "CC: #{rcpt.to_s}\r\n"
         end
       end
 
-      if bcc = @to
+      if bcc = @bcc
         bcc.each do |rcpt|
           io << "BCC: #{rcpt.to_s}\r\n"
         end
