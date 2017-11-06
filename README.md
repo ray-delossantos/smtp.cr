@@ -4,7 +4,7 @@ SMTP client in Crystal
 
 ## Deprecated
 
-Please use this, as thsi shard won't be supported anymore:
+Please use arcage shard, as this library won't be supported anymore
 https://github.com/arcage/crystal-email
 
 
